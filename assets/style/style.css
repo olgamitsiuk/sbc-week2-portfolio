@@ -6,10 +6,15 @@
     color: rgb(23, 22, 22);
 }
 
+:root {
+    --main-bg-color: #DDC2A5;
+    --lighter-bg-color: #E7D2BA;
+  }
+
 body {
     width: 100%;
     font-size: 16px;
-    background-color: #DDC2A5;
+    background-color: var(--main-bg-color);
 }
 
 a {
@@ -24,10 +29,13 @@ h1 {
 h2 {
     font-size: 32px;
 }
+ul {
+    list-style-type: none;
+}
 
 header {
     width: 100%;
-    background-color: #DDC2A5;
+    background-color: var(--main-bg-color);
     padding: 20px;
     display: flex;
     justify-content: space-between;
@@ -68,7 +76,6 @@ nav a:hover {
 }
 
 .social-media {
-    width: 30%;
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-end;
@@ -105,7 +112,7 @@ nav a:hover {
 
 .button:hover {
     background-color:rgb(23, 22, 22);
-    color: #DDC2A5;
+    color: var(--main-bg-color);
     transition: background-color 0.5s;
 }
 
@@ -119,20 +126,30 @@ main {
 }
 
 section {
-    padding: 80px 0;
+    padding: 70px 0;
     margin: auto;
-    width: 80%;
+    width: 90%;
 }
 
 .about {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
 }
+
+.about-title {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.about-title h3, .about-title h2 {
+    width: 47%;
+    padding-bottom: 30px;
+} 
 
 .about-photo {
     width: 47%;
-    border-radius: 50%;
     overflow: hidden;
 }
 
@@ -152,22 +169,66 @@ section {
     justify-content: center;
 }
 
-.about-text h2 {
-    padding: 10px 0;
-}
+
 .about-text h1 {
-    padding: 10px 0;
+    padding-top: 30px;
 }
 
 .about-text p {
-    font-size: 24px;
     line-height: 1.5;
     padding: 10px 0;
 }
 
-.projects, 
-.contacts-content {
-    padding: 100px 0;
+.reverse {
+    flex-direction: row-reverse;
+    flex: 0 0 auto;
+    padding-top: 30px;
+}
+
+.reverse a:last-child {
+    margin-left: 0;
+    margin-right: 10px;
+}
+
+.experience {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: var(--lighter-bg-color);
+}
+
+.experience h1 {
+    width: 35%;
+}
+
+.experience ul {
+    width: 55%;
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 30px;
+    justify-content: space-between;
+}
+
+.experience ul li {
+    width: 47%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: aliceblue;
+    padding: 30px 30px 10px 30px;
+}
+
+.experience ul li h3{
+    margin-bottom: 20px;
+    flex-basis: 50%;
+}
+
+.experience ul li p {
+    padding-bottom: 20px;
+}
+
+.projects {
     display: grid;
     grid-template-columns: 50% 50%;
     row-gap: 50px;
@@ -232,20 +293,22 @@ section {
 
 .contacts {
     width: 100%;
-    background-color: #E7D2BA;
 }
 
 .contacts-content {
-    width: 80%;
+    width: 90%;
+    display: flex;
     margin: auto;
+    justify-content: space-between;
     padding-bottom: 50px;
 }
 
 .my-contacts {
-    grid-column: 1 / 2;
-    grid-row: 1;
+    width: 90%;
     display: flex;
+    margin: auto;
     flex-direction: column;
+    padding: 30px 0;
 }
 
 .my-contacts span, .my-contacts a {
@@ -259,6 +322,7 @@ section {
 
 .contact-social-media a {
     margin: 20px 20px 0 0;
+    transition: transform 0.5s;
 }
 
 .contact-social-media a:hover {
@@ -266,45 +330,28 @@ section {
 }
 
 .contact-form {
-    grid-column: 2 / 3;
-    grid-row: 1;
+    margin-top: 20px;
+    width: 100%;
     display: flex;
     flex-direction: column;
 }
 
 .contact-form input, .contact-form textarea {
     padding: 15px;
-    box-shadow: 2px 2px 2px grey;
     border: none;
+    border-radius: 5px;
     margin-bottom: 20px;
 }
 
-.send {
-    padding: 10px 25px;
-    margin-top: 20px;
-    display: flex;
-    align-items: center;
-    background-color:rgb(23, 22, 22);
-    color: #DDC2A5;
-}
-
-.send:after {
-    content: url('../img/right-arrow1.png');
-    margin-top: 5px;
-    padding-left: 10px;
-}
-
-.send:hover {
-    background-color: #5b5858;
-}
 
 .contact-form div {
     display: flex;
     justify-content: flex-start;
+    margin-top: 10px;
 }
 
 footer {
-    background-color: #DDC2A5;
+    background-color: var(--main-bg-color);
     z-index: 10;
     width: 100%;
     padding: 20px;
