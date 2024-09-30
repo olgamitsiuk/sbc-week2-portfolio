@@ -129,13 +129,26 @@ section {
     padding: 70px 0;
     margin: auto;
     width: 90%;
+    animation: show 500ms ease-in-out;
 }
+
+@keyframes show {
+    from {
+      padding-top: 100px;
+      opacity: 0;
+    }
+    to {
+      padding-top: 70px;
+      opacity: 1;
+    }
+  }
 
 .about {
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+    
 }
 
 .about-title {
