@@ -75,6 +75,61 @@ nav a:hover {
     text-decoration: underline;
 }
 
+.burger-toggle {
+    display: none;
+  }
+  
+.burger-menu {
+display: none;
+flex-direction: column;
+justify-content: space-around;
+width: 30px;
+height: 25px;
+background: transparent;
+border: none;
+cursor: pointer;
+padding: 0;
+z-index: 10;
+}
+
+.burger-menu span {
+width: 30px;
+height: 3px;
+background: rgb(23, 22, 22);
+transition: all 0.3s linear;
+}
+
+.burger-toggle:checked + .burger-menu span:nth-child(1) {
+transform: rotate(45deg) translate(5px, 5px);
+}
+
+.burger-toggle:checked + .burger-menu span:nth-child(2) {
+opacity: 0;
+}
+
+.burger-toggle:checked + .burger-menu span:nth-child(3) {
+transform: rotate(-45deg) translate(7px, -6px);
+}
+
+.mobile-nav {
+display: none;
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-color: var(--main-bg-color);
+flex-direction: column;
+justify-content: center;
+align-items: center;
+z-index: 9;
+}
+  
+.mobile-nav a {
+    font-size: 24px;
+    margin: 20px 0;
+}
+
 .social-media {
     display: flex;
     flex-wrap: wrap;
@@ -90,9 +145,27 @@ nav a:hover {
 .social-media a:last-child {
     margin-right: 0;
 }
-.social-media a:first-child:hover, .social-media a:nth-child(2):hover {
+.social-media a:first-child:hover, 
+.social-media a:nth-child(2):hover,
+.social-media-mobile a:first-child:hover, 
+.social-media-mobile a:nth-child(2):hover
+{
     transform: scale(1.1);
     transition: transform 0.5s;
+}
+
+.social-media-mobile {
+    margin-top: 80px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center'
+}
+
+.social-media-mobile a:first-child, 
+.social-media-mobile a:nth-child(2) {
+    width: 20%;
+    margin: 10px 0;
 }
 
 .button {
@@ -176,6 +249,7 @@ section {
 }
 
 .about-text {
+    padding-top: 30px;
     width: 47%;
     display: flex;
     flex-direction: column;
@@ -205,6 +279,7 @@ section {
 
 .experience {
     width: 100%;
+    padding: 50px 30px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -213,6 +288,7 @@ section {
 
 .experience h1 {
     width: 35%;
+ 
 }
 
 .experience ul {
