@@ -62,7 +62,38 @@
     }
 }
 
+@media (max-width: 768px) {
+    h1 {
+        font-size: 32px;
+    }
+    
+    h2 {
+        font-size: 28px;
+    }
+
+    .experience ul{
+        justify-content: center;
+      }
+    .experience ul li {
+        width: 90%;
+      }
+    section {
+        padding: 50px 0;
+    }
+}
+
 @media (max-width: 480px) {
+
+    h1 {
+        font-size: 32px;
+    }
+    
+    h2 {
+        font-size: 28px;
+    }
+    .experience ul{
+        justify-content: space-between;
+      }
     .experience ul li {
         width: 100%;
       }
