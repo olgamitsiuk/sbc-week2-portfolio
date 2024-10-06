@@ -3,11 +3,11 @@
 767 */
 
 @media (max-width: 992px) {
-    nav, .social-media {
+    nav, .hide {
         display: none;
     }
 
-    section {
+    section, .my-contacts {
         width: 80%;
     }
 
